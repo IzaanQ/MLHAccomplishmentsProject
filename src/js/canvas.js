@@ -1,6 +1,8 @@
 import platform from '../img/platform.png'
 import hills from '../img/hills.png'
 import background from '../img/background.png'
+import platformSmallTall from '../img/platformSmallTall.png'
+import theMLH from '../img/theMLH.png'
 
 
 console.log(platform)
@@ -23,11 +25,12 @@ class Player {
       y: 0,
     };
     this.width = 30;
-    this.height = 30;
+    this.height = 100;
+
+    this.image = createImage(theMLH)
   }
   draw() {
-    c.fillStyle = "red";
-    c.fillRect(this.position.x, this.position.y, this.width, this.height);
+    c.drawImage(this.image, this.position.x, this.position.y)
   }
 
   update() {
@@ -107,15 +110,21 @@ const keys = {
 let scrollOffset = 0;
 
 function init() {
-platformImage = createImage(platform)
-
+let platformImage = createImage(platform)
+let platformSmallTallImage = createImage(platformSmallTall)
 
  player = new Player()
  platforms = [
+  new Platform({ x: platformImage.width * 5 - 200 - 2 + platformImage.width - platformSmallTallImage.width, y: 400, image: platformSmallTallImage }),
+  new Platform({ x: platformImage.width * 5 - 200 - 2 + platformImage.width - platformSmallTallImage.width, y: 300, image: platformSmallTallImage }),
+  new Platform({ x: platformImage.width * 5 + 300 - 2 + platformImage.width - platformSmallTallImage.width, y: 400,
+   image: platformSmallTallImage }),
+  new Platform({ x: platformImage.width * 5 - 100, y: 480, image: platformImage }),
   new Platform({ x: -1, y: 480, image: platformImage }),
   new Platform({ x: platformImage.width * 2 - 500, y: 480, image: platformImage }),
   new Platform({ x: platformImage.width * 3 - 200, y: 480, image: platformImage }),
-  new Platform({ x: platformImage.width * 4 - 200 - 2, y: 480, image: platformImage })
+  new Platform({ x: platformImage.width * 4 - 200 - 2, y: 480, image: platformImage }),
+  
 ]
 
  genericObjects = [
@@ -150,7 +159,7 @@ function animate() {
 
   if (keys.right.pressed && player.position.x < 400) {
     player.velocity.x = player.speed;
-  } else if (keys.left.pressed && player.position.x > 100) {
+  } else if ((keys.left.pressed && player.position.x > 100) || (keys.left.pressed && scrollOffset === 0 && player.position.x > 0) ) {
     player.velocity.x = -player.speed;
   } else {
     player.velocity.x = 0;
@@ -163,7 +172,7 @@ function animate() {
       genericObjects.forEach(genericObject => {
         genericObject.position.x -= player.speed * .66
       })
-    } else if (keys.left.pressed) {
+    } else if (keys.left.pressed && scrollOffset > 0) {
       scrollOffset -= player.speed;
       platforms.forEach((platform) => {
         platform.position.x += player.speed;

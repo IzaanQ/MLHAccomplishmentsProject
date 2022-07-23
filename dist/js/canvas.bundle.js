@@ -157,6 +157,7 @@ var Player = /*#__PURE__*/function () {
   function Player() {
     _classCallCheck(this, Player);
 
+    this.speed = 10;
     this.position = {
       x: 100,
       y: 100
@@ -250,24 +251,8 @@ function createImage(imageSrc) {
 
 var platformImage = createImage(_img_platform_png__WEBPACK_IMPORTED_MODULE_0__["default"]);
 var player = new Player();
-var platforms = [new Platform({
-  x: -1,
-  y: 480,
-  image: platformImage
-}), new Platform({
-  x: platformImage.width * 2 - 500,
-  y: 480,
-  image: platformImage
-})];
-var genericObjects = [new GenericObject({
-  x: -1,
-  y: -1,
-  image: createImage(_img_background_png__WEBPACK_IMPORTED_MODULE_2__["default"])
-}), new GenericObject({
-  x: -1,
-  y: -1,
-  image: createImage(_img_hills_png__WEBPACK_IMPORTED_MODULE_1__["default"])
-})];
+var platforms = [];
+var genericObjects = [];
 var keys = {
   right: {
     pressed: false
@@ -287,6 +272,14 @@ function init() {
     image: platformImage
   }), new Platform({
     x: platformImage.width * 2 - 500,
+    y: 480,
+    image: platformImage
+  }), new Platform({
+    x: platformImage.width * 3 - 200,
+    y: 480,
+    image: platformImage
+  }), new Platform({
+    x: platformImage.width * 4 - 200 - 2,
     y: 480,
     image: platformImage
   })];
@@ -315,27 +308,27 @@ function animate() {
   player.update();
 
   if (keys.right.pressed && player.position.x < 400) {
-    player.velocity.x = 5;
+    player.velocity.x = player.speed;
   } else if (keys.left.pressed && player.position.x > 100) {
-    player.velocity.x = -5;
+    player.velocity.x = -player.speed;
   } else {
     player.velocity.x = 0;
 
     if (keys.right.pressed) {
-      scrollOffset += 5;
+      scrollOffset += player.speed;
       platforms.forEach(function (platform) {
-        platform.position.x -= 5;
+        platform.position.x -= player.speed;
       });
       genericObjects.forEach(function (genericObject) {
-        genericObject.position.x -= 3;
+        genericObject.position.x -= player.speed * .66;
       });
     } else if (keys.left.pressed) {
-      scrollOffset -= 5;
+      scrollOffset -= player.speed;
       platforms.forEach(function (platform) {
-        platform.position.x += 5;
+        platform.position.x += player.speed;
       });
       genericObjects.forEach(function (genericObject) {
-        genericObject.position.x += 3;
+        genericObject.position.x += player.speed * .66;
       });
     }
   }
@@ -355,6 +348,7 @@ function animate() {
   }
 }
 
+init();
 animate();
 addEventListener("keydown", function (_ref3) {
   var keyCode = _ref3.keyCode;
@@ -367,7 +361,7 @@ addEventListener("keydown", function (_ref3) {
 
   switch (keyCode) {
     case 38:
-      player.velocity.y -= 15;
+      player.velocity.y -= 10;
       break;
   }
 

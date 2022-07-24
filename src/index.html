@@ -4,17 +4,753 @@
     <meta charset="UTF-8" />
     <title>Canvas Boilerplate | Chris Courses</title>
     <style>
-      body {
-        margin: 0;
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap");
+
+body {
+  background-color: #265a8f;
+  margin: 7px 0;
+}
+
+.title {
+  height: 75vh;
+  width: 100%;
+  background-color: #751b00;
+  display: flex;
+  overflow: auto;
+}
+
+.mainTitle {
+  font-family: "Open Sans", "Open Sans", "Helvetica Neue", "Arial", "sans-serif";
+  text-align: center;
+  position: relative;
+  margin: 10px auto;
+  font-size: 6vw;
+}
+
+.subtitle {
+  font-family: "Open Sans", "Open Sans", "Helvetica Neue", "Arial", "sans-serif";
+  text-align: center;
+  font-size: 3vw;
+  position: absolute;
+  margin: 300px 0;
+}
+
+#header {
+  background-color: white;
+  width: 100%;
+  margin-top: -7px;
+  margin-left: -9px;
+  margin-right: -8px;
+  padding: 15px 0px 0px 0px;
+  padding-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 110px;
+  margin-top: 1px;
+  margin-bottom: -19px;
+  margin-left: 40px;
+  margin-right: 330px;
+}
+
+.Sponsor {
+  background-color: #265a8f;
+  border: #265a8f;
+  color: white;
+  border-radius: 5%;
+  padding: 15px 20px;
+  margin-right: 20px;
+  font-weight: 600;
+  font-family: "Open Sans", "Helvetica Neue", "Arial", "sans-serif";
+  font-size: 12px;
+}
+
+.Attend {
+  background-color: #ecc700;
+  border: #ecc700;
+  color: #676869;
+  border-radius: 5%;
+  padding: 15px 20px;
+  font-weight: 600;
+  font-family: "Open Sans", "Helvetica Neue", "Arial", "sans-serif";
+  font-size: 12px;
+}
+
+button {
+  color: #353535;
+  background-color: white;
+  border: white;
+  font-family: "Open Sans", "Helvetica Neue", "Arial", "sans-serif";
+  font-size: 13px;
+  cursor: pointer;
+  margin-left: 28px;
+}
+
+button.dropbtn {
+  padding: 31px 0;
+  padding-top: 0;
+  margin-left: 180px;
+}
+
+button.dropbtn2 {
+  padding: 31px 0;
+  padding-top: 0;
+}
+
+button.dropbtn3 {
+  padding: 31px 0;
+  padding-top: 0;
+}
+
+button.dropbtn4 {
+  padding: 31px 0;
+  padding-top: 0;
+}
+
+button.dropbtn5 {
+  padding: 31px 0;
+  padding-top: 0;
+}
+
+/*DROP DOWN CSS STARTS HERE*/
+
+/*DROP DOWN 1*/
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  font-size: 14px;
+  font-family: "Open Sans", "Helvetica Neue", "Arial", "sans-serif";
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
+
+/*DROP DOWN 2*/
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown2 {
+  position: relative;
+  display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  font-size: 14px;
+  font-family: "Open Sans", "Helvetica Neue", "Arial", "sans-serif";
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content2 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content2 a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show2 {
+  display: block;
+}
+
+/*DROP DOWN 3*/
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown3 {
+  position: relative;
+  display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content3 {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  font-size: 14px;
+  font-family: "Open Sans", "Helvetica Neue", "Arial", "sans-serif";
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content3 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content3 a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show3 {
+  display: block;
+}
+
+/*DROP DOWN 4*/
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown4 {
+  position: relative;
+  display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content4 {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  font-size: 14px;
+  font-family: "Open Sans", "Helvetica Neue", "Arial", "sans-serif";
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content4 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content4 a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show4 {
+  display: block;
+}
+
+/*DROP DOWN 5*/
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown5 {
+  position: relative;
+  display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content5 {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  font-size: 14px;
+  font-family: "Open Sans", "Helvetica Neue", "Arial", "sans-serif";
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content5 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content5 a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show5 {
+  display: block;
+}
+
+/*Road Map styling*/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+.roadMap {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.conatiner {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #265a8f;
+  padding: 40px 0;
+}
+
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline ul {
+  list-style: none;
+}
+
+.timeline ul li {
+  padding: 20px;
+  background-color: #162f51;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.timeline ul li:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-content h1 {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.timeline-content .date {
+  font-size: 13px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+@media only screen and (min-width: 768px) {
+  .timeline::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #c53c02;
+  }
+
+  .timeline ul li {
+    width: 50%;
+    margin-bottom: 50px;
+    position: relative;
+  }
+
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-90px);
+    border-radius: 20px 0 20px 20px;
+  }
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(50px);
+    border-radius: 0 20px 20px 20px;
+  }
+  .timeline ul li::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: #751b00;
+    border-radius: 50%;
+    top: 0;
+  }
+  .timeline ul li:nth-child(odd)::after {
+    transform: translate(50%, -80%);
+    right: -30px;
+  }
+  .timeline ul li:nth-child(even)::after {
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+  .timeline ul li:hover::after {
+    background-color: #ecc700;
+  }
+  .timeline-content .date {
+    position: absolute;
+    top: -30px;
+  }
+}
+
+.navbar {
+  width:100%;
+}
+
+.interactive{
+  margin: 0;
         background-color: black;
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100vh;
-      }
+}
     </style>
   </head>
   <body>
+    
+
+    <div id="header">
+      <div class="navbar">
+        <a href="https://mlh.io/">
+          <img
+            src="https://raw.githubusercontent.com/IzaanQ/mlhAccomplishments/main/mlh-logo-color.png"
+            alt="Major League Hacking Logo"
+          />
+        </a>
+
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">
+            Hacker Resources
+          </button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="https://careerlab.mlh.io/">Careers & Internships</a>
+            <a href="https://challenges.mlh.io/">Coding Challenges</a>
+            <a href="https://sponsor.mlh.io/offers/">Freebies & Perks</a>
+          </div>
+        </div>
+
+        <div class="dropdown2">
+          <button onclick="myFunction2()" class="dropbtn2">Events</button>
+          <div id="myDropdown2" class="dropdown-content2">
+            <a href="2023-Season-Hackathons.html">2023 Season Hackathons</a>
+            <a href="Localhost-Workshops.html">Localhost Workshops</a>
+          </div>
+        </div>
+
+        <div class="dropdown3">
+          <button onclick="myFunction3()" class="dropbtn3">
+            Organizer Resources
+          </button>
+          <div id="myDropdown3" class="dropdown-content3">
+            <a href="https://mlh.io/become-an-official-event"
+              >Organize a Hackathon</a
+            >
+            <a href="https://guide.mlh.io/">Hackathon Organizer Guide</a>
+            <a href="https://my.mlh.io/">MyMLH</a>
+            <a href="https://localhost.mlh.io/">MLH Localhost</a>
+            <a href="https://hackcon.mlh.io/">Hackcon</a>
+          </div>
+        </div>
+
+        <div class="dropdown4">
+          <button onclick="myFunction4()" class="dropbtn4">About</button>
+          <div id="myDropdown4" class="dropdown-content4">
+            <a href="https://mlh.io/about">About Major League Hacking(MLH)</a>
+            <a href="https://mlh.io/faq">Frequently Asked Questions</a>
+            <a href="https://mlh.io/contact">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="dropdown5">
+          <button onclick="myFunction5()" class="dropbtn5">Employers</button>
+          <div id="myDropdown5" class="dropdown-content5">
+            <a href="https://mlh.io/sponsor">Sponsor Events</a>
+            <a href="https://fellowship.mlh.io/partners">Hire Developers</a>
+          </div>
+        </div>
+
+        <a href="https://mlh.io/events">
+          <button class="Attend">Attend</button>
+        </a>
+
+        <a href="https://mlh.io/sponsor">
+          <button class="Sponsor">Sponsor</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="title">
+      <div class="mainTitle">
+        <h1>History of MLH</h1>
+      </div>
+      <div id="responsive-sub" class="subtitle">
+        <p>
+          Here you can go throught the history of MLH as an organization via our
+          built in side scroller or manually through the road map below
+        </p>
+      </div>
+    </div>
+
+
+  <div class="interactive">
     <canvas></canvas>
+  </div>
+
+  <div class="roadMap">
+    <div class="conatiner">
+      <div class="timeline">
+        <ul>
+          <li>
+            <div class="timeline-content">
+              <h2 class="date">Starting in 2013</h2>
+              <h1>Beginnings</h1>
+              <p>
+                Major League Hacking was co-founded by Jonathan Gottried and
+                Mike Swift in 2013. Since its inception, the organization has
+                ran over 200 weekend long complitions worlwide each year.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-content">
+              <h2 class="date">Feburary 2014</h2>
+              <h1>Hackcon</h1>
+              <p>
+                The first Hackcon was held at Alley NYC in 2014 as a 2 day
+                conference for hackercommunity leaders and organizers to learn
+                from each other and work to improve Hackathons.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-content">
+              <h2 class="date">June 2014</h2>
+              <h1>Hackathon Hackers Facebook</h1>
+              <p>
+                The Hackathon Hackers Facebook page was establishd as a way
+                for bring the hackathon communuty as a whole closer together.
+                This page became a resources for many organizers as it
+                included information from past Hackcons as well.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-content">
+              <h2 class="date">October 22, 2015</h2>
+              <h1>MLH Community Council</h1>
+              <p>
+                The MLH Community Council is boared of active comunity
+                memebers who represesnt various roles within the organization
+                itself such as hackers, organizers, sponsers, etc. The purpose
+                of which is to help develop ways to tailor to student hackers
+                and bring a variety of perspectives to the table when
+                dicussing important comunity issues.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-content">
+              <h2 class="date">During 2016</h2>
+              <h1>Certified B Corporation</h1>
+              <p>
+                Since MLH is powered by one community of 65,000 hackers in 16
+                different countries, Major League Hacking became a Certified B
+                Corporation in 2016. This means that they had to take into
+                account the impacts of the community from their decisions, and
+                not just their investors and sponsors.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-content">
+              <h2 class="date">September 29th 2019</h2>
+              <h1>MLH x APAC</h1>
+              <p>
+                In order to assure that as many hackers around the word have
+                the oppertunity compete in these competitions, MLA has
+                officially launched in the Asia-Pacific for hackers in India,
+                australia, Singapore, etc.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-content">
+              <h2 class="date">May 3rd 2022</h2>
+              <h1>TechTogether Acquisition</h1>
+              <p>
+                In order to promote and create an inclusive envoroment for
+                <b>all</b> progammers, MLH made the descision to aquire
+                TechTogether, a organization whos' events specifically serve
+                hackers who pertain to marginalized groups.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-content">
+              <h2 class="date">Extras</h2>
+              <h1>Fun Facts</h1>
+              <p>- The Hackathon Hackers Facebook page has more than 80K</p>
+              <p>
+                - Each year, more than 200 weekend long invention competitions
+                are powered
+              </p>
+              <p>
+                - 65,000 students each year gather from all over the world to
+                take part in these hackathons
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>//Dropdown 1
+
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      
+      // Close the dropdown menu if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+    
+      //Dropdown 2
+    
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+      function myFunction2() {
+        document.getElementById("myDropdown2").classList.toggle("show2");
+      }
+      
+      // Close the dropdown menu if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn2')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content2");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show2')) {
+              openDropdown.classList.remove('show2');
+            }
+          }
+        }
+      }
+    
+    //Dropdown 3
+    
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction3() {
+        document.getElementById("myDropdown3").classList.toggle("show3");
+      }
+      
+      // Close the dropdown menu if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn3')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content3");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show3')) {
+              openDropdown.classList.remove('show3');
+            }
+          }
+        }
+      }
+    
+      //Dropdown 4
+    
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction4() {
+        document.getElementById("myDropdown4").classList.toggle("show4");
+      }
+      
+      // Close the dropdown menu if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn4')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content4");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show4')) {
+              openDropdown.classList.remove('show4');
+            }
+          }
+        }
+      }
+    
+      //Dropdown 5
+    
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction5() {
+        document.getElementById("myDropdown5").classList.toggle("show5");
+      }
+      
+      // Close the dropdown menu if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn5')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content5");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show5')) {
+              openDropdown.classList.remove('show5');
+            }
+          }
+        }
+      }
+    
+      
+    </script>
+
   </body>
 </html>

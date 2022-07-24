@@ -115,15 +115,27 @@ let platformSmallTallImage = createImage(platformSmallTall)
 
  player = new Player()
  platforms = [
-  new Platform({ x: platformImage.width * 5 - 200 - 2 + platformImage.width - platformSmallTallImage.width, y: 400, image: platformSmallTallImage }),
-  new Platform({ x: platformImage.width * 5 - 200 - 2 + platformImage.width - platformSmallTallImage.width, y: 300, image: platformSmallTallImage }),
+  
   new Platform({ x: platformImage.width * 5 + 300 - 2 + platformImage.width - platformSmallTallImage.width, y: 400,
    image: platformSmallTallImage }),
+  new Platform({ x: platformImage.width * 8 + 869 - 2 + platformImage.width - platformSmallTallImage.width, y: 400,
+    image: platformSmallTallImage }),
+    new Platform({ x: platformImage.width * 8 + 1086 - 2 + platformImage.width - platformSmallTallImage.width, y: 400,
+      image: platformSmallTallImage }),
   new Platform({ x: platformImage.width * 5 - 100, y: 480, image: platformImage }),
   new Platform({ x: -1, y: 480, image: platformImage }),
   new Platform({ x: platformImage.width * 2 - 500, y: 480, image: platformImage }),
   new Platform({ x: platformImage.width * 3 - 200, y: 480, image: platformImage }),
   new Platform({ x: platformImage.width * 4 - 200 - 2, y: 480, image: platformImage }),
+  new Platform({ x: platformImage.width * 7.5 - 200 - 2, y: 480, image: platformImage }),
+  new Platform({ x: platformImage.width * 9 - 200 - 2, y: 480, image: platformImage }),
+  new Platform({ x: platformImage.width * 12 - 200 - 2, y: 480, image: platformImage }),
+  new Platform({ x: platformImage.width * 13 - 50 - 2, y: 480, image: platformImage }),
+  new Platform({ x: platformImage.width * 15 - 350 - 2, y: 480, image: platformImage }),
+  new Platform({ x: platformImage.width * 17 - 550 - 2, y: 480, image: platformImage }),
+  new Platform({ x: platformImage.width * 18 - 150 - 2, y: 480, image: platformImage }),
+  new Platform({ x: platformImage.width * 19 - 154 - 2, y: 480, image: platformImage }),
+  new Platform({ x: platformImage.width * 5 - 170 - 2 + platformImage.width - platformSmallTallImage.width, y: 400, image: platformSmallTallImage })
   
 ]
 

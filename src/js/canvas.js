@@ -222,17 +222,17 @@ animate();
 
 addEventListener("keydown", ({ keyCode }) => {
   switch (keyCode) {
-    case 37:
+    case 65:
       keys.left.pressed = true;
       break;
   }
   switch (keyCode) {
-    case 38:
+    case 87:
       player.velocity.y -= 10;
       break;
   }
   switch (keyCode) {
-    case 39:
+    case 68:
       keys.right.pressed = true;
       break;
   }
@@ -245,16 +245,16 @@ addEventListener("keydown", ({ keyCode }) => {
 
 addEventListener("keyup", ({ keyCode }) => {
   switch (keyCode) {
-    case 37:
+    case 65:
       keys.left.pressed = false;
       break;
   }
   switch (keyCode) {
-    case 38:
+    case 87:
       break;
   }
   switch (keyCode) {
-    case 39:
+    case 68:
       keys.right.pressed = false;
       break;
   }
